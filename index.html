@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇 · Snake</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+
+    <header class="game__header">
+      <h1 class="game__title">贪吃蛇</h1>
+      <p class="game__hint">方向键 或 W A S D 控制方向，空格开始 / 暂停</p>
+    </header>
+
+    <section class="board">
+      <canvas id="game-canvas" class="board__canvas" width="400" height="400">
+        你的浏览器不支持 canvas，请换用现代浏览器。
+      </canvas>
+
+      <div class="overlay" id="overlay" hidden>
+        <div class="overlay__content">
+          <p class="overlay__title" id="overlay-title">游戏结束</p>
+          <p class="overlay__text" id="overlay-text">最终分数 0 分</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__item">
+        <span class="panel__label">得分</span>
+        <span class="panel__value" id="score">0</span>
+      </div>
+      <div class="panel__item">
+        <span class="panel__label">最高分</span>
+        <span class="panel__value" id="best">0</span>
+      </div>
+      <div class="panel__actions">
+        <button class="btn" id="btn-start" type="button">开始游戏</button>
+        <button class="btn btn--ghost" id="btn-restart" type="button">重新开始</button>
+      </div>
+    </section>
+
+    <p class="game__status" id="status">界面已就绪，点击「开始游戏」</p>
+
+    <footer class="game__footer">
+      <p>毕业项目 · 完整可玩版</p>
+    </footer>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
